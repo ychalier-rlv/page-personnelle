@@ -1,0 +1,41 @@
+* {
+    font-family: "Open Sans", sans-serif;
+    color: white;
+}
+
+body {
+    background: #101010;
+}
+
+#wrapper {
+    max-width: 600px;
+    margin: auto;
+}
+
+img,
+svg {
+    border-radius: 50%;
+    background-color: #64b4ff;
+    animation: background-color-rainbow infinite linear 10s;
+}
+
+a,
+a:visited {
+    color: #64b4ff;
+}
+
+a:hover {
+    color: #569ada;
+}
+
+@keyframes background-color-rainbow {
+    0% {
+        background-color: #64b4ff;
+    }
+    50% {
+        background-color: #c600cd;
+    }
+    100% {
+        background-color: #64b4ff;
+    }
+}
