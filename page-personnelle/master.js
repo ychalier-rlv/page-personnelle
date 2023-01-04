@@ -21,11 +21,11 @@ window.addEventListener("load", () => {
 
     window.addEventListener("mousemove", (event) => {
         eyes.forEach(eye => {
-            const dx = eye.originAbsolute.x - event.clientX;
-            const dy = eye.originAbsolute.y - event.clientY;
+            const dx = event.clientX - eye.originAbsolute.x;
+            const dy = event.clientY - eye.originAbsolute.y;
             const angle = Math.atan2(dy, dx);
-            eye.element.setAttribute("cx", eye.originRelative.x - radius * Math.cos(angle));
-            eye.element.setAttribute("cy", eye.originRelative.y - radius * Math.sin(angle));
+            eye.element.setAttribute("cx", eye.originRelative.x + radius * Math.cos(angle));
+            eye.element.setAttribute("cy", eye.originRelative.y + radius * Math.sin(angle));
         });
     });
 
